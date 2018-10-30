@@ -20,6 +20,7 @@
 *.rar
 
 # vs file
+.vscode
 .settings
 .classpath
 .project
