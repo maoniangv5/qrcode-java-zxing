@@ -44,13 +44,13 @@ public class QrcodeController {
 
 
 
-    @RequestMapping(value = "/qrcode", method = RequestMethod.POST)
+    @RequestMapping(value = "/qrcode", method = RequestMethod.GET)
     @ResponseBody
     public static void main(String[] args) throws IOException, NotFoundException {
 
         MultiFormatReader formatReader = new MultiFormatReader();
 
-        File file = new File("C:/Users/chem/Desktop/qrcode/zhao1.png");
+        File file = new File("C:\\Users\\chem\\Desktop\\qrcode-java-zxing\\zhao1.png");
         BufferedImage image = ImageIO.read(file);
 
         BinaryBitmap binaryBitmap = new BinaryBitmap(new HybridBinarizer(new BufferedImageLuminanceSource(image)));
